@@ -1,0 +1,140 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      4929,        130]
+NotebookOptionsPosition[      4538,        112]
+NotebookOutlinePosition[      4879,        127]
+CellTagsIndexPosition[      4836,        124]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{"<<", "Combinatorica`"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"forAll", "[", 
+    RowBox[{"list_", ",", "cond_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"Select", "[", 
+     RowBox[{"list", ",", 
+      RowBox[{
+       RowBox[{"!", 
+        RowBox[{"cond", "@", "#"}]}], "  ", "&"}], ",", "1"}], "]"}], "===", 
+    RowBox[{"{", "}"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Do", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"count", " ", "=", " ", "0"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"a", " ", "=", " ", 
+     RowBox[{"IntegerPartitions", "[", "i", "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"For", "[", 
+     RowBox[{
+      RowBox[{"j", " ", "=", " ", "0"}], ",", " ", 
+      RowBox[{"j", "<", " ", 
+       RowBox[{"Length", "[", "a", "]"}]}], ",", 
+      RowBox[{"j", "++"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"forAll", "[", 
+         RowBox[{
+          RowBox[{"a", "[", 
+           RowBox[{"[", "j", "]"}], "]"}], ",", "PrimeQ"}], "]"}], ",", " ", 
+        RowBox[{"count", " ", "++"}]}], "]"}]}], "\[IndentingNewLine]", 
+     "     ", "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", " ", 
+     RowBox[{
+      RowBox[{"count", " ", ">", " ", "5000"}], ",", " ", 
+      RowBox[{
+       RowBox[{"Print", "[", "i", "]"}], ";", 
+       RowBox[{"Break", "[", "]"}]}]}], "]"}]}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", "71", ",", "71"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.5460010177867217`*^9, 3.5460012013682218`*^9}, {
+  3.546001294328539*^9, 3.546001424086961*^9}, {3.5460014711906548`*^9, 
+  3.5460015056696267`*^9}, {3.5460015378144655`*^9, 3.546001690190181*^9}, {
+  3.546002478073245*^9, 3.5460027217441826`*^9}, {3.546002761288444*^9, 
+  3.546002879471204*^9}, {3.5460030291017623`*^9, 3.5460030978296933`*^9}, {
+  3.5460031720289373`*^9, 3.5460032205717134`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "compat"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Combinatorica Graph and Permutations functionality has \
+been superseded by preloaded functionality. The package now being loaded may \
+conflict with this. Please see the Compatibility Guide for details.\"\>"}]], \
+"Message", "MSG",
+ CellChangeTimes->{{3.5460011107170367`*^9, 3.5460012019372544`*^9}, 
+   3.546001326431375*^9, {3.5460013650105815`*^9, 3.546001389357974*^9}, 
+   3.546001424737998*^9, {3.546001644311557*^9, 3.5460016924913125`*^9}, {
+   3.546002601438301*^9, 3.5460026614447336`*^9}, {3.5460027152248096`*^9, 
+   3.5460027222302103`*^9}, {3.5460027627765293`*^9, 
+   3.5460028804232583`*^9}, {3.5460030308058596`*^9, 3.546003098523733*^9}, {
+   3.5460031927921247`*^9, 3.5460032210207396`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Select", "::", "normal"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Nonatomic expression expected at position \
+\[NoBreak]\\!\\(1\\)\[NoBreak] in \[NoBreak]\\!\\(Select[\\(\\(List, \
+\\(\\(\\(\\(! \\(\\(PrimeQ[#1]\\)\\)\\)\\) &\\)\\), 1\\)\\)]\\)\[NoBreak]. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/normal\\\", \
+ButtonNote -> \\\"Select::normal\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{{3.5460011107170367`*^9, 3.5460012019372544`*^9}, 
+   3.546001326431375*^9, {3.5460013650105815`*^9, 3.546001389357974*^9}, 
+   3.546001424737998*^9, {3.546001644311557*^9, 3.5460016924913125`*^9}, {
+   3.546002601438301*^9, 3.5460026614447336`*^9}, {3.5460027152248096`*^9, 
+   3.5460027222302103`*^9}, {3.5460027627765293`*^9, 
+   3.5460028804232583`*^9}, {3.5460030308058596`*^9, 3.546003098523733*^9}, {
+   3.5460031927921247`*^9, 3.546003222543826*^9}}],
+
+Cell[BoxData["71"], "Print",
+ CellChangeTimes->{3.546003244040056*^9}]
+}, Open  ]]
+},
+WindowSize->{707, 817},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (October 6, 2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 2020, 48, 252, "Input"],
+Cell[2602, 72, 835, 15, 56, "Message"],
+Cell[3440, 89, 1009, 17, 21, "Message"],
+Cell[4452, 108, 70, 1, 23, "Print"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

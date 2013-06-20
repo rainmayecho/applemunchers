@@ -1,0 +1,23 @@
+import itertools
+
+def find_next(digit, primes,index, current):
+    sdigit = str(digit)
+    c = current
+    for x in range(0,10):
+        if x in current:
+            continue
+        a = sdigit[:2]
+        b = int(str(x) + a)
+        if b % primes[index] == 0:
+            c.append(int(sdigit[0]))
+            if find_next(sdigit[1:],primes,index+1,c):
+                current.append(int(sdigit[0]))
+                if len(c) == 9:
+                    return True
+                
+    return False
+
+current = [9,8,2]
+primes = [13,11,7,5,3,2]
+
+find_next(289,primes,0,current)
